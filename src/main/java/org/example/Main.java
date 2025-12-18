@@ -10,7 +10,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int option = SHOW_MENU;
 
-        System.out.println("Pico y Placa Predictor");
+        System.out.println("Pico y Placa Predictor by Mathias Ruales");
 
         while (option != OPTION_EXIT) {
             System.out.print("\nOptions: 1 - Check, 2 - Exit" +
@@ -25,7 +25,7 @@ public class Main {
                     PicoPlacaMethods.checkPlaca(scanner);
                     break;
                 case OPTION_EXIT:
-                    System.out.print("\nThank you");
+                    System.out.print("\nThank you for using the application.");
                     break;
                 default:
                     System.out.println("Please only enter 1 or 2.");
