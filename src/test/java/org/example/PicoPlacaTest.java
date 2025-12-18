@@ -30,7 +30,7 @@ public DateValidator dateValidator = new DateValidator();
     }
 
     @Test
-    public void validPlateTest() {
+    public void validPlateTest7Numbers() {
         new LicensePlate("PBL-4013");
     }
 
@@ -40,11 +40,29 @@ public DateValidator dateValidator = new DateValidator();
     }
 
     @Test
+    public void validPlateTest6Numbers() {
+        new LicensePlate("PBL-405");
+    }
+
+    @Test
+    public void validPlateTest6NumbersNoHyphen() {
+        new LicensePlate("PBL405");
+    }
+
+    @Test
     public void canDriveWeekDay() {
         LicensePlate plate = new LicensePlate("PBL-4013");
         LocalDate date = LocalDate.of(2025, 12, 18);
         LocalTime time = LocalTime.of(12, 30);
         Assertions.assertTrue(dateValidator.canDrive(plate, date, time));
+    }
+
+    @Test
+    public void lastDigit(){
+        LicensePlate plate = new LicensePlate("PBL-4013");
+        int expected = 3;
+        int lastDigit = plate.getLastNumber();
+        Assertions.assertEquals(expected,lastDigit);
     }
 
     @Test
@@ -63,6 +81,4 @@ public DateValidator dateValidator = new DateValidator();
         LocalTime time = LocalTime.of(7, 30);
         Assertions.assertFalse(dateValidator.canDrive(plate, date, time));
     }
-
-
 }

@@ -13,7 +13,6 @@ public class PicoPlacaMethods {
 
         try {
             LicensePlate licensePlate = new LicensePlate(input);
-            System.out.println("License Plate: " +licensePlate.getPlateNumber() + " last number: " + licensePlate.getLastNumber());
 
             DateValidator dateValidator = new DateValidator();
 
