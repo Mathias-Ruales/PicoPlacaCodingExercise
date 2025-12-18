@@ -38,6 +38,4 @@ public class DateValidator {
         return (!time.isBefore(PICO_MORNING_START) && !time.isAfter(PICO_MORNING_END)) ||
                 (!time.isBefore(PICO_AFTERNOON_START) && !time.isAfter(PICO_AFTERNOON_END));
     }
-
-
 }

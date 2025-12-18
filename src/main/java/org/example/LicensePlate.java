@@ -36,6 +36,4 @@ public class LicensePlate {
             char last = numbers.charAt(numbers.length() - 1);
             return Character.getNumericValue(last);
     }
-
-
 }
